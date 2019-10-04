@@ -16,7 +16,8 @@
 					<tr>
 						<td>{{ $teacher->id }}</td>
 						<td>{{ $teacher->name }}</td>
-						<td>{{ $teacher->advisory_section }}</td>
+					    <td>{{ $teacher->advisory_section }}</td>
+						
 
 						
 					</tr>

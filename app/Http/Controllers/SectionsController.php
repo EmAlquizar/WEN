@@ -15,22 +15,22 @@ class SectionsController extends Controller
     }
     public function create()
     {
-    	return view('teachers.create');
+    	return view('sections.create');
     }
     public function store()
     {
         request()->validate([
             'name' => 'required',
-            'advisory_section' => 'required',
+            'is_active' => 'required',
 
             
         ]);
         
-    	$subject = new Subjects;
-    	$subject->name = request()->name;
-    	$subject->advisory_section = request()->advisory_section;
-    	$subject->save();
+    	$sections = new Sections;
+    	$sections->name = request()->name;
+    	$sections->is_active = request()->is_active;
+    	$sections->save();
 
-    	return redirect('/subjects');
+    	return redirect('/sections');
     }
 }
