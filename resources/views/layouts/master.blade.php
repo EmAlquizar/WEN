@@ -25,6 +25,9 @@
             <a class="nav-link" href="/strands">Strands</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="/strands">Subject Strands</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="/teachers">Teachers</a>
           </li>
            <li class="nav-item">

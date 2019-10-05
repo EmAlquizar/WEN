@@ -6,6 +6,8 @@
 				<tr>
 					<th scope="col">ID</th>
 					<th scope="col">Name</th>
+					<th scope="col">Semester</th>
+					<th scope="col">Grade Level</th>
 					
 				</tr>
 			</thead>
@@ -14,6 +16,8 @@
 					<tr>
 						<td>{{ $subject-strand->id }}</td>
 						<td>{{ $subject-strand->name }}</td>
+						<td>{{ $subject-strand->semester }}</td>
+						<td>{{ $subject-strand->grade_level }}</td>
 						
 					</tr>
 				@endforeach
@@ -21,6 +25,6 @@
 			
 			
 		</table>
-		<a class="btn btn-primary" href='/sections/add'>Add New Subject Strand</a>
+		<a class="btn btn-primary" href='/subject-strands/add'>Add New Subject Strand</a>
 	</div>
 @endsection

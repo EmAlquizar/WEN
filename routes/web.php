@@ -27,6 +27,8 @@ Route::middleware('auth')->group(function() {
 	Route::get('/strands/add', 'StrandsController@create');
 	Route::post('/strands/store', 'StrandsController@store');
 	Route::get('/teachers', 'TeachersController@index');
+	Route::get('/teachers/{teacher}/edit', 'TeachersController@edit');
+	Route::post('/teachers/{teacher}/update', 'TeachersController@update');
 	Route::get('/teachers/add', 'TeachersController@create');
 	Route::post('/teachers/store', 'TeachersController@store');
 	Route::get('/sections', 'SectionsController@index');
@@ -35,10 +37,7 @@ Route::middleware('auth')->group(function() {
 	Route::get('/subject-strands', 'SubjectStrandsController@index');
 	Route::get('/subject-strands/add', 'SubjectStrandsController@create');
 	Route::post('/subject-strands/store', 'SubjectStrandsController@store');
-
 });
-
-
 
 
 
