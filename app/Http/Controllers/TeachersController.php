@@ -8,12 +8,12 @@ use App\Sections;
 
 class TeachersController extends Controller
 {
-    
-    public function index()
+     public function index()
     {
-    	$teachers = Teachers::all();
-    	return view('teachers.index')->with('teachers', $teachers);
+        $teachers = Teachers::all();
+        return view('teachers.index')->with('teachers', $teachers);
     }
+    
     public function create()
     {
     	return view('teachers.create');
@@ -21,7 +21,7 @@ class TeachersController extends Controller
 
     public function edit(Teachers $teacher)
     {
-        $section = Sections::all();
+        $sections = Sections::all();
         return view('teachers.edit',compact('teacher', 'sections'));
         //dd($teacher);
     }

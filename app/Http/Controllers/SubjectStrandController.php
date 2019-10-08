@@ -9,22 +9,22 @@ class SubjectStrandsController extends Controller
 {
     public function index()
     {
-    	$subjectstrand = Subject_Strands::all();
-    	return view('subjects.index')->with('subjectstrand', $subjectstrands);
+    	$subjects = Subject_Strands::all();
+    	return view('subjectstrands.index')->with('subject_strands', $subjects);
     }
     public function create()
     {
-    	return view('subjectsstrand.create');
+    	return view('subjectstrands.create');
     }
     public function store()
     {
         request()->validate([
-            'name' => 'required',
+            'semester' => 'required',
+            'grade_level' => 'required',
             
         ]);
         
     	$subjectstrands = new Subject_Strands;
-    	$subjectstrands->name = request()->name;
         $subjectstrands->semester = request()->semester;
         $subjectstrands->grade_level = request()->grade_level;
     	$subjectstrands->save();

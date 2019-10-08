@@ -5,19 +5,17 @@
 			<thead>
 				<tr>
 					<th scope="col">ID</th>
-					<th scope="col">Name</th>
 					<th scope="col">Semester</th>
 					<th scope="col">Grade Level</th>
 					
 				</tr>
 			</thead>
 			<tbody>
-				@foreach($subject-strand as $subject-strand)
+				@foreach($subject_strands as $subject_strand)
 					<tr>
-						<td>{{ $subject-strand->id }}</td>
-						<td>{{ $subject-strand->name }}</td>
-						<td>{{ $subject-strand->semester }}</td>
-						<td>{{ $subject-strand->grade_level }}</td>
+						<td>{{ $subject_strand->id }}</td>
+						<td>{{ $subject_strand->semester }}</td>
+						<td>{{ $subject_strand->grade_level }}</td>
 						
 					</tr>
 				@endforeach
